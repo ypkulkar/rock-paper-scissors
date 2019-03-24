@@ -77,12 +77,18 @@
                 let usrScore = 0;
                 let cpuScore = 0;
                 let round = 0;
+                let index = 0;
+                let choices = ["rock","paper","scissors"];
 
-                for(let i = 0; i < 5; i++){
-
-                    
+                while(index < 5){
+  
                     rawUsrInput = prompt("Choose between Rock, Paper and Scissors:","");
                     usrInput = parseString(rawUsrInput);
+                    if(!choices.includes(usrInput)){
+                        console.log("Please choose a valid option!");
+                        continue;
+                    }
+
                     cpuInput = computerPlay();
                     round = playRound(usrInput,cpuInput);
                     console.log(round[0]);
@@ -96,11 +102,16 @@
                             cpuScore++;
                     }
 
-                    console.log(`SCORE: usr = ${usrScore}   cpu = ${cpuScore}`);
+                    console.log(`SCORE: usr = ${usrScore} cpu = ${cpuScore}`);
+                    index++;
                 }
 
                 console.log(`Your score is ${usrScore}`);
                 console.log(`CPU score is ${cpuScore}`);
+                let finalRes = (usrScore > cpuScore)? "YOU WON!":
+                (cpuScore > usrScore)? "YOU LOST!": "IT'S A DRAW!";
+                console.log(finalRes);
+
             }
             game();
         </script>
