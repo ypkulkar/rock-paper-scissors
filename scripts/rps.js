@@ -79,7 +79,7 @@ function winStatement(str){
 
 function displayChoices(usrChoice, cpuChoice){
     const usr = document.querySelector("#usr-choice");
-    usr.textContent = `USER: ${usrChoice}`;
+    usr.textContent = `YOU: ${usrChoice}`;
 
     const cpu = document.querySelector("#cpu-choice");
     cpu.textContent = `CPU: ${cpuChoice}`; 
