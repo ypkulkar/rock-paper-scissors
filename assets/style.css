@@ -1,0 +1,36 @@
+body {
+    background-image: url("../assets/img/bg.png");
+}
+
+#main-heading {
+    text-align: center;
+    padding: 40px;
+    font-size: 50px;
+}
+
+.btns {
+    text-align: center;
+}
+
+.btn {
+    width:200px;
+    height:100px;
+    margin: 50px auto;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.center {
+    text-align: center;
+}
+
