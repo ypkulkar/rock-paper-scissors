@@ -151,6 +151,10 @@ btns.forEach(btn => {
             displayChoices("-","-");
         }
 
+        // Adding the click effect
+        btn.classList.add('playing');
+        btn.addEventListener('transitionend', removeTransition);
+
     })
 });
 
@@ -159,10 +163,15 @@ function reset(){
     usrScore = 0;
     cpuScore = 0;
     updateScores(usrScore,cpuScore);
+    displayChoices("-","-");
     winStatement("Let's begin!");
 }
-
 
 const resetBtn = document.querySelector("#reset-button");
 resetBtn.addEventListener("click",reset);
 
+// Needed so that the click effect only lasts for an instance
+function removeTransition(e) {
+    if (e.propertyName !== 'transform') return;
+    e.target.classList.remove('playing');
+}
