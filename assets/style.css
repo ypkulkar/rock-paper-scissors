@@ -46,10 +46,6 @@ body {
     box-shadow: 0 0 1rem #ffc600;
   }
 
-.inline {
-    display: inline-block;
-}
-
 .right {
     float: right;
 }
